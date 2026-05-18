@@ -33,5 +33,11 @@ public void DeleteTask(int id)
 {
     repository.Delete(id);
 }
+
+public void UpdateTask(int id, string newTitle)
+{
+    repository.Update(id,newTitle);
+}
+
 }
 }

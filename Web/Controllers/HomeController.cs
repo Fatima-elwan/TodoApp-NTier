@@ -34,5 +34,14 @@ public IActionResult DeleteTask(int id)
 taskService.DeleteTask(id);
 return RedirectToAction("Index");
 }
+[HttpPost]
+public IActionResult UpdateTask(int id, string newTitle)
+{
+    if(!string.IsNullOrEmpty(newTitle))
+            {
+                taskService.UpdateTask(id, newTitle);
+            }
+            return RedirectToAction("Index");
+}
 }
 }

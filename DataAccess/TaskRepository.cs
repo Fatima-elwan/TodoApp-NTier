@@ -27,5 +27,13 @@ public void Delete(int id)
                 tasks.Remove(task);
             }
 }
+public void Update(int id, string newTitle)
+{
+    var task = tasks.FirstOrDefault(t => t.Id == id);
+    if (task != null)
+            {
+                task.Title = newTitle;
+            }
+}
 }
 }

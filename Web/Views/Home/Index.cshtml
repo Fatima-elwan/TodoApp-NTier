@@ -1,4 +1,5 @@
-﻿@model List<NTierTodoApp.Models.TaskItem>
+﻿@using NTierTodoApp.Models
+@model List<NTierTodoApp.Models.TaskItem>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +22,11 @@ else
 <form method="post" asp-action="CompleteTask" style="display:inline;">
 <input type="hidden" name="id" value="@task.Id" />
 <button type="submit">اكتملت</button>
+</form>
+<form ethod="post" asp-action="UpdateTask">
+<input type="hidden" name="id" value="@task.Id"/>
+<input type="text" name="newTitle" value="@task.Title"/>
+<button type="submit">حفظ التعديل</button>
 </form>
 <form method="post" asp-action="DeleteTask" style="display:inline;"">
 <input type="hidden" name="id" value="@task.Id" />
