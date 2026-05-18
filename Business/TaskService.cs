@@ -31,7 +31,7 @@ task.IsComplete = true;
 
 public void DeleteTask(int id)
 {
-
+    repository.Delete(id);
 }
 }
 }

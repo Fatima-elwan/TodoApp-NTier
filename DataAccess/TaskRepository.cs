@@ -21,7 +21,11 @@ return tasks.FirstOrDefault(t => t.Id == id);
 }
 public void Delete(int id)
 {
-    
+    var task = tasks.FirstOrDefault(t => t.Id == id);
+    if (task != null)
+            {
+                tasks.Remove(task);
+            }
 }
 }
 }

@@ -3,9 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NTierTodoApp.Business;
 using NTierTodoApp.DataAccess;
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddSingleton<TaskRepository>(); // استخدام Singleton بالذاكرة للمحاكاة
 builder.Services.AddTransient<TaskService>();
 var app = builder.Build();
